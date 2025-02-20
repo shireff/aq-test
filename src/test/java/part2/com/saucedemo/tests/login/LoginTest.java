@@ -7,12 +7,14 @@ import part2.com.saucedemo.base.BaseTest;
 public class LoginTest extends BaseTest {
 
     @Test
-    public void testLoginErrorMsg () {
+    public void testLoginErrorMsg() {
         loginPage.setUserName("standard_user");
         loginPage.setPassword("WrongPassword");
         loginPage.clickLogin();
-        String actualMessage =  loginPage.getErrorMsg();
+        String actualMessage = loginPage.getErrorMsg();
         Assert.assertTrue(actualMessage.contains("Epic sadface"));
-
     }
 }
+
+
+
